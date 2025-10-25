@@ -1,3 +1,4 @@
+//AIM: Write a simple Dart program to understand the language basics.
 // Define a main function, which is the entry point of a Dart program.
 void main() {
   // Variables and data types
