@@ -1,0 +1,38 @@
+
+//AIM: Write unit tests for UI components.
+// a test file in the test directory
+import 'package:flutter/material.dart';
+import 'package:flutter_test/flutter_test.dart';
+// Import your widget file
+import 'package:flutterlab/exp2cButtonCounter.dart';
+void main()
+{
+ testWidgets('Counter starts at 0',
+ (WidgetTester tester) async {
+ await tester.pumpWidget(
+ const MaterialApp(home: MyHomePage()));
+ // Find the Text widget by its content
+ final textFinder1 = find.text('Counter Value:');
+ // Verify that the Text widget is found
+ expect(textFinder1, findsOneWidget);
+ // Find the Text widget by its content
+ final textFinder2 = find.text('0');
+ // Verify that the Text widget is found
+ expect(textFinder2, findsOneWidget);
+ }
+ );
+ testWidgets('Counter increments when button is pressed',
+ (WidgetTester tester) async {
+ await tester.pumpWidget(
+ const MaterialApp(home: MyHomePage()));
+ // Find the button or tappable area
+ final buttonFinder = find.text('Increment Counter');
+ expect(buttonFinder, findsOneWidget);
+ // Simulate a tap
+ await tester.tap(buttonFinder);
+ await tester.pump(); // Rebuild the widget tree after the tap
+ // Verify the expected change (e.g., text changes, state updates)
+ expect(find.text('0'), findsNothing);
+ expect(find.text('1'), findsOneWidget);
+ });
+}
