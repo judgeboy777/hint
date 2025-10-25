@@ -1,0 +1,32 @@
+//AIM: Write a Dart console program that prints your name, checks age with conditionals, uses a loop
+to count from 1 to 5, and defines a function to return the sum of two numbers.
+void main() {
+  // 1. Print your name
+  String name = "Rakesh";
+  print("Hello, my name is $name.");
+
+  // 2. Check age with conditionals
+  int age = 18;
+  if (age >= 18) {
+    print("You are an adult.");
+  } else {
+    print("You are a minor.");
+  }
+
+  // 3. Loop to count from 1 to 5
+  print("Counting from 1 to 5:");
+  for (int i = 1; i <= 5; i++) {
+    print(i);
+  }
+
+  // 4. Function to return the sum of two numbers
+  int a = 10;
+  int b = 15;
+  int result = addNumbers(a, b);
+  print("Sum of $a and $b is $result.");
+}
+
+// Function definition
+int addNumbers(int num1, int num2) {
+  return num1 + num2;
+}
